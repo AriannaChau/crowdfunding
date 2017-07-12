@@ -1,5 +1,5 @@
-<div *ngFor="let illness of illnesses | async" (click)="goToDetailPage(illnesses)"  class="card">
+<div *ngFor="let illness of illnesses | async" (click)="goToDetailPage(illness)"  class="card">
   <h2>hello!</h2>
   <h3>{{illness.title}}</h3>
-  <h4>{{illness.name}} wants to raise {{illness.goal}}</h4>
+  <h4>{{illness.name}} wants to raise ${{illness.goal}}</h4>
 </div>

@@ -15,6 +15,6 @@ export class IllnessService {
     }
 
   getIllnessById(illnessId: string){
-    return this.database.object('illnesses/' + illnessId);
+    return this.database.object('illness/' + illnessId);
   }
 }

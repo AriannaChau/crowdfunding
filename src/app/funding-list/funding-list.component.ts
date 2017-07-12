@@ -21,6 +21,6 @@ export class FundingListComponent implements OnInit {
   };
 
   goToDetailPage(clickedIllness) {
-    this.router.navigate(['illnesses', clickedIllness.$key]);
+    this.router.navigate(['illness', clickedIllness.$key]);
   };
 }
