@@ -1,0 +1,36 @@
+<h3>Add New Cause</h3>
+<div>
+  <div>
+    <label>Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Your Name:</label>
+    <br>
+    <input #newName>
+  </div>
+
+  <div>
+    <label>Your Goal:</label>
+    <br>
+    <input #newGoal>
+  </div>
+
+  <div>
+    <label>Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+</div>
+   <button (click)="submitForm(
+   newTitle.value,
+   newName.value,
+   newGoal.value,
+   newDescription.value);
+   newTitle.value='';
+   newName.value='';
+   newGoal.value='';
+   newDescription.value=''
+   ">Add</button>

@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IllnessDetailComponent } from './illness-detail/illness-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { NewCauseComponent } from './new-cause/new-cause.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +23,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     FundingListComponent,
-    IllnessDetailComponent
+    IllnessDetailComponent,
+    AdminComponent,
+    NewCauseComponent
   ],
   imports: [
     BrowserModule,

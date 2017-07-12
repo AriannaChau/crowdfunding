@@ -14,6 +14,10 @@ export class IllnessService {
       return this.illnesses;
     }
 
+  addIllness(newCause: Illness) {
+    this.illnesses.push(newCause);
+  }
+
   getIllnessById(illnessId: string){
     return this.database.object('illness/' + illnessId);
   }
