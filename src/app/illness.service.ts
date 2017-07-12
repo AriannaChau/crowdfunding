@@ -7,7 +7,7 @@ export class IllnessService {
   illnesses: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.illnesses = database.list('illnesses');
+    this.illnesses = database.list('illness');
   }
 
   getIllnesses(){

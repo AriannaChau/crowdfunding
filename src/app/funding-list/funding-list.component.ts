@@ -20,7 +20,7 @@ export class FundingListComponent implements OnInit {
     this.illnesses = this.illnessService.getIllnesses();
   };
 
-  goToDetailPage(clickedAlbum) {
-    this.router.navigate(['albums', clickedAlbum.$key]);
+  goToDetailPage(clickedIllness) {
+    this.router.navigate(['illnesses', clickedIllness.$key]);
   };
 }
