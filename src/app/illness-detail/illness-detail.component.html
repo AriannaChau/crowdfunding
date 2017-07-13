@@ -1,6 +1,13 @@
 <div>
   <h3>{{(illnessToDisplay | async)?.title}}</h3>
   <h4>{{(illnessToDisplay | async)?.name}}</h4>
-  <h4>{{(illnessToDisplay | async)?.goal}}</h4>
+  <h4>${{currentAmount}} to ${{(illnessToDisplay | async)?.goal}}.00</h4>
+  <h4></h4>
   <p>{{(illnessToDisplay | async)?.description}}</p>
+  <form #fundingForm="ngForm" (ngSubmit)="fundProject(fundingForm); false;">
+    <label for="amount">Do you want to fund me?</label>
+    <br>
+    <input type="number" name="amount" placeholder="$" ngModel>
+    <button type="submit">Fund Me!</button>
+  </form>
 </div>

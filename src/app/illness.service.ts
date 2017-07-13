@@ -22,6 +22,11 @@ export class IllnessService {
     return this.database.object('illness/' + illnessId);
   }
 
+  updateDonation(localUpdatedDonation){
+    var illnessEntryInFirebase = this.getIllnessById(localUpdatedDonation.$key);
+    illnessEntryInFirebase.update({donation: localUpdatedDonation.donation});
+  }
+
   updateCause(localUpdatedCause){
   var illnessEntryInFirebase = this.getIllnessById(localUpdatedCause.$key);
   illnessEntryInFirebase.update({title: localUpdatedCause.title,

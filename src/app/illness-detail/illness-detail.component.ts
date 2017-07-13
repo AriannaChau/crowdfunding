@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Illness } from '../illness.model';
 import { IllnessService } from '../illness.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-illness-detail',
@@ -12,6 +13,8 @@ import { IllnessService } from '../illness.service';
 })
 export class IllnessDetailComponent implements OnInit {
   illnessId: string;
+  currentAmount: number = 0;
+  fundAmount;
   illnessToDisplay;
 
   constructor(
@@ -26,5 +29,11 @@ export class IllnessDetailComponent implements OnInit {
      });
     this.illnessToDisplay = this.illnessService.getIllnessById(this.illnessId);
    }
+
+  fundProject(formInfo: NgForm) {
+    var donatedAmount = parseInt(formInfo.value.amount);
+    return this.currentAmount += donatedAmount;
+    // console.log(this.currentAmount);
+  }
 
 }

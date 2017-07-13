@@ -15,8 +15,8 @@ export class NewCauseComponent implements OnInit {
   ngOnInit() {
     }
 
-  submitForm(title: string, name: string, goal: number, description: string) {
-    var newCause: Illness = new Illness(title, name, goal, description);
+  submitForm(title: string, name: string, donation: number, goal: number, description: string) {
+    var newCause: Illness = new Illness(title, name, donation, goal, description);
     this.illnessService.addIllness(newCause);
   }
 }
