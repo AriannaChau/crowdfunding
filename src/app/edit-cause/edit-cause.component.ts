@@ -20,4 +20,10 @@ export class EditCauseComponent implements OnInit {
     this.illnessService.updateCause(causeToUpdate);
   }
 
+  beginDeletingCause(causeToDelete){
+    if(confirm("Are you sure you want to delete this cause?")){
+      this.illnessService.deleteCause(causeToDelete);
+    }
+  }
+
 }

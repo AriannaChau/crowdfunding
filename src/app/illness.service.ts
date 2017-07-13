@@ -29,4 +29,9 @@ export class IllnessService {
                               goal: localUpdatedCause.goal,
                               description: localUpdatedCause.description});
   }
+
+  deleteCause(localCauseToDelete){
+    var illnessEntryInFirebase = this.getIllnessById(localCauseToDelete.$key);
+    illnessEntryInFirebase.remove();
+  }
 }
