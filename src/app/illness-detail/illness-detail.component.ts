@@ -28,6 +28,7 @@ export class IllnessDetailComponent implements OnInit {
       this.illnessId = urlParameters['id'];
      });
     this.illnessToDisplay = this.illnessService.getIllnessById(this.illnessId);
+
     this.illnessToDisplay.subscribe(response => {
       this.donation = response.donation;
       console.log(this.illnessToDisplay);
