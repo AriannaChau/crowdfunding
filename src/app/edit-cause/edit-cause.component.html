@@ -1,0 +1,18 @@
+<h4>Edit Cause</h4>
+
+<label>New Title:</label>
+<input [(ngModel)]="selectedCause.title">
+<br>
+
+<label>New Name:</label>
+<input [(ngModel)]="selectedCause.name">
+<br>
+
+<label>New Goal:</label>
+<input type="number" [(ngModel)]="selectedCause.goal">
+<br>
+
+<label>New Description:</label>
+<input [(ngModel)]="selectedCause.description">
+
+<button (click)="beginUpdatingCause(selectedCause)">Update</button>

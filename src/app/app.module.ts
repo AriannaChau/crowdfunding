@@ -11,6 +11,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IllnessDetailComponent } from './illness-detail/illness-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewCauseComponent } from './new-cause/new-cause.component';
+import { EditCauseComponent } from './edit-cause/edit-cause.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     FundingListComponent,
     IllnessDetailComponent,
     AdminComponent,
-    NewCauseComponent
+    NewCauseComponent,
+    EditCauseComponent
   ],
   imports: [
     BrowserModule,
