@@ -1,0 +1,20 @@
+{ "illness": [{
+    "title": "Some Cause",
+    "name": "Pink Floyd",
+    "donation": 0,
+    "goal": 23523,
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom."
+    }, {
+    "title": "Another Cause",
+    "name": "stringman",
+    "donation": 0,
+    "goal": 23523,
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom."
+    }, {
+    "title": "WOW",
+    "name": "dumb",
+    "donation": 0,
+    "goal": 23523,
+    "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom."
+  }]
+}

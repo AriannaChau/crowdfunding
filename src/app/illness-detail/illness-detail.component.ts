@@ -13,9 +13,9 @@ import { NgForm } from '@angular/forms';
 })
 export class IllnessDetailComponent implements OnInit {
   illnessId: string;
-  currentAmount: number = 0;
-  fundAmount;
+  donation: number;
   illnessToDisplay;
+  currentAmount;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,11 +28,22 @@ export class IllnessDetailComponent implements OnInit {
       this.illnessId = urlParameters['id'];
      });
     this.illnessToDisplay = this.illnessService.getIllnessById(this.illnessId);
+    this.illnessToDisplay.subscribe(response => {
+      this.donation = response.donation;
+      console.log(this.illnessToDisplay);
+      console.log(this.donation);
+    });
+    console.log(this.illnessToDisplay);
+    console.log(this.donation);
    }
 
-  fundProject(formInfo: NgForm) {
-    var donatedAmount = parseInt(formInfo.value.amount);
-    return this.currentAmount += donatedAmount;
+  fundProject(amount) {
+    // this.donation = 0;
+    var donatedAmount = parseInt(amount);
+    console.log(this.donation);
+    this.donation += donatedAmount;
+    console.log(this.donation);
+    this.illnessService.updateDonation(this.donation, this.illnessId);
     // console.log(this.currentAmount);
   }
 
